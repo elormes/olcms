@@ -1,17 +1,54 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/hover.css' %}">
+
+    <title>UMaT|Offline Learning</title>
+ </head>
+
 <body>
-{% for v in videos %}
-    <li>{{ v.title }}</li>
-     <video  width="500" height="500" controls>
-          <source src="../{{ v.upload.url }}" type="video/mp4">
-          <source src="../{{ v.upload.url }}" type="video/ogg">
-          Your browser does not support the video tag.
-    </video>
-{% endfor %}
-</body>
+        <div class="container main">
+            <div class="row">
+           <div class="col col-md-12 text-center">
+                <video class="card-img-top" width="720px" height="460px" controls>
+                    <source src="../{{ videos.0.upload.url }}" type="video/mp4">
+                </video>
+                <h2>Video Title</h2>
+                <p>Video Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam est et rerum eaque fugiat officiis autem provident amet laboriosam impedit!</p>
+           </div>
+           </div>
+           <br>
+           <hr>
+        </div>
+        <div class="container">
+                <div class="row">
+                    {% for v in videos %}
+                        <div class="col-lg-3 col-sm-6 text-center">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{ v.title }}</h4>
+                                    <p id="title" class="card-text">{{ v.description }}</p>
+                                    <button class="btn btn-outline-success btn-lg btn-block" id="order">Watch <i class="fa fa-eye" id="cart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+
+
+        <script src="{% static 'js/scrollreveal.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+          <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+    </body>
 </html>
