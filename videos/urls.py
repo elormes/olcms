@@ -23,6 +23,7 @@ app_name = 'videos'
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('test/', views.test, name='test'),
     path("playlist/<int:p_id>", views.detail, name="detail")
 ] + static(settings.MEDIA_URL,
            document_root=settings.MEDIA_ROOT)

@@ -8,8 +8,7 @@ body,html{
 	/*opacity:0.85;*/
 	background: url("/static/img/sun.jpg") no-repeat fixed center;
 	background-size: cover;
-	max-height: 60%;
-
+	padding-bottom: 10%;
 }
 .join{
 	margin-top:110px;
@@ -22,10 +21,7 @@ body,html{
 .join p
 {  font-family: "ABeeZee",sans-serif;
     color: white;
-	padding-left: 200px;
-	padding-right: 200px;
 	font-weight: 200;
-	line-height: 2em;
 }
 .join a{
 	text-transform: uppercase;
@@ -43,6 +39,9 @@ body,html{
 }
 .search{
 	margin-top: 50%;
+}
+.small-search {
+	width: 100%;
 }
 .find{
 	width:200px;

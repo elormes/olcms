@@ -3,8 +3,11 @@ from videos.models import Playlist
 
 
 def home(request):
-    playlists = Playlist.objects.all()[:5]
+    playlists = Playlist.objects.all()[:2]
     return render(request, "test.html", {"playlist": playlists})
+
+def test(request):
+    return render(request, 'index.html')
 
 
 def detail(request, p_id):
