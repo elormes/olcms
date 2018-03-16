@@ -35,7 +35,7 @@ class Video(models.Model):
     likes = models.IntegerField()
     tags = models.ManyToManyField(Tags)
     category = models.ManyToManyField(Category)
-    playlist = models.ForeignKey(Playlist, related_name="videos")
+    playlist = models.ForeignKey(Playlist, related_name="videos", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
