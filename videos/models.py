@@ -7,14 +7,23 @@ class Playlist(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=5000)
 
+    def __str__(self):
+        return self.name
+
 
 class Tags(models.Model):
     name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
 
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=5000)
+
+    def __str__(self):
+        return self.name
 
 
 class Video(models.Model):
@@ -27,6 +36,9 @@ class Video(models.Model):
     tags = models.ManyToManyField(Tags)
     category = models.ManyToManyField(Category)
     playlist = models.ForeignKey(Playlist, related_name="videos")
+
+    def __str__(self):
+        return self.title
 
 
 
