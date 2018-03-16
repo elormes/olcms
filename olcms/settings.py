@@ -25,7 +25,7 @@ SECRET_KEY = 'zqltyg+vb&qnom_gg9^yc!+(ceq$ogvo_g$bm9l-mhv3kvon=t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.27.1', '127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'videos',
+    'mod_wsgi.server',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +121,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'videos/static')
 STATIC_URL = '/static/'
 
 # Media files (User-uploaded media files)
