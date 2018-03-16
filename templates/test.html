@@ -56,7 +56,7 @@
                             {% for p in playlist %}
                                 <div class="col-lg-4 col-sm-6 text-center">
                                   <div class="card">
-                                    <img class="card-img-top" src="{{ p.image.url }}" alt="Card image cap" id="dig">
+                                    <img class="card-img-top" src="../{{ p.image.url }}" alt="Card image cap" id="dig">
                                     <div class="card-body">
                                       <h4 class="card-title">{{ p.name|upper }}</h4>
                                       <p id="title" class="card-text">{{ p.description }}</p>

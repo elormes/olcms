@@ -3,12 +3,12 @@ from videos.models import Playlist
 
 
 def home(request):
-    playlists = Playlist.objects.all()[:2]
-    return render(request, "test.html", {"playlist": playlists})
+    playlists = Playlist.objects.all()[:3]
+    return render(request, "index.html", {"playlist": playlists})
 
 def test(request):
-    return render(request, 'index.html')
-
+    playlists = Playlist.objects.all()[:2]
+    return render(request, "test.html", {"playlist": playlists})
 
 def detail(request, p_id):
     playlist = get_object_or_404(Playlist, id=p_id)

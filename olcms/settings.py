@@ -124,5 +124,5 @@ STATIC_URL = '/static/'
 
 # Media files (User-uploaded media files)
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'videos/media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = 'media/'

@@ -71,72 +71,18 @@
                 <div class="container featured">
                     <h2 class="text-center">Featured Videos</h2>
                         <div class="row">
+                            {% for p in playlist %}
                                 <div class="col-lg-4 col-sm-6 text-center">
                                   <div class="card">
-                                    <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
+                                    <img class="card-img-top" src="{{ p.image.url }}" alt="Card image cap" id="dig">
                                     <div class="card-body">
-                                      <h4 class="card-title">Java Tutorials</h4>
-                                      <p id="title" class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, impedit.</p>
-                                      <button class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now<i class="fa fa-eye" id="cart"></i></button>
+                                      <h4 class="card-title">{{ p.name|upper }}</h4>
+                                      <p id="title" class="card-text">{{ p.description }}</p>
+                                      <a href="{% url "videos:detail" p.id %}" role="button" class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now<i class="fa fa-eye" id="cart"></i></a>
                                       </div>
                                   </div>
                                 </div>
-                               
-                                <div class="col-lg-4 col-sm-6 text-center">
-                                  <div class="card">
-                                    <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
-                                    <div class="card-body">
-                                      <h4 class="card-title">Electrical Engineering</h4>
-                                      <p id="title" class="card-text">Professor Bangal Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, soluta.</p>
-                                      <button  class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now <i class="fa fa-eye" id="cart"></i></button>
-                                      </div>
-                                  </div>
-                                </div>
-                               
-                                     <div class="col-lg-4 col-sm-6 text-center">
-                                  <div class="card">
-                                    <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
-                                    <div class="card-body">
-                                      <h4 class="card-title">Umat Inovation Fair</h4>
-                                      <p id="title" class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, iusto.</p>
-                                      <button  class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now <i class="fa fa-eye" id="cart"></i></button>
-                                      </div>
-                                  </div>
-        
-                                </div>
-                                <div class="col-lg-4 col-sm-6 text-center">
-                                        <div class="card">
-                                          <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
-                                          <div class="card-body">
-                                            <h4 class="card-title">Python Tutorials</h4>
-                                            <p id="title" class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, impedit.</p>
-                                            <button class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now<i class="fa fa-eye" id="cart"></i></button>
-                                            </div>
-                                        </div>
-                                      </div>
-                                     
-                                      <div class="col-lg-4 col-sm-6 text-center">
-                                        <div class="card">
-                                          <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
-                                          <div class="card-body">
-                                            <h4 class="card-title">Mining Engineering</h4>
-                                            <p id="title" class="card-text">Professor Bangal Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, soluta.</p>
-                                            <button  class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now <i class="fa fa-eye" id="cart"></i></button>
-                                            </div>
-                                        </div>
-                                      </div>
-                                     
-                                           <div class="col-lg-4 col-sm-6 text-center">
-                                        <div class="card">
-                                          <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
-                                          <div class="card-body">
-                                            <h4 class="card-title">Umex Awards</h4>
-                                            <p id="title" class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, iusto.</p>
-                                            <button  class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now <i class="fa fa-eye" id="cart"></i></button>
-                                            </div>
-                                        </div>
-                                        
-                                      </div>
+                            {% endfor %}
                                </div>
                          </div>
                        
