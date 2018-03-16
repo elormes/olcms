@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for v in display_video %}
+        <li>{{ v.title }}</li>
+        <!--<video width="320" height="240" controls>
+          <source src="{{# MEDIA_URL }}6.008.1x-prob-events.mp4" type="video/mp4">
+          <source src="{{#MEDIA_URL }}6.008.1x-prob-events.mp4" type="video/ogg">
+        Your browser does not support the video tag.
+     </video>-->
+    {% endfor %}
+
+</ul>
+</body>
+</html>

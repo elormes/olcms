@@ -1,4 +1,5 @@
 from django.db import models
+import os
 
 # Create your models here.
 
@@ -29,16 +30,19 @@ class Category(models.Model):
 class Video(models.Model):
     upload = models.FileField()
     title = models.CharField(max_length=50)
-    views = models.IntegerField()
+    views = models.IntegerField(default=0,blank=True)
     description = models.CharField(max_length=5000)
     date_uploaded = models.DateField(auto_now=True)
-    likes = models.IntegerField()
+    likes = models.IntegerField(default=0, blank=True)
     tags = models.ManyToManyField(Tags)
     category = models.ManyToManyField(Category)
     playlist = models.ForeignKey(Playlist, related_name="videos", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
+
+    def filename(self):
+        return os.path.basename(self.upload.name)
 
 
 
