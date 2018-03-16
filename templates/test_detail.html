@@ -7,6 +7,12 @@
 <body>
 {% for v in videos %}
     <li>{{ v.title }}</li>
+     <video  width="500" height="500" controls>
+          <source src="../../videos/{{ MEDIA_URL }}{{ v.filename }}" type="video/mp4">
+          <source src="../../videos/{{ MEDIA_URL }}{{ v.filename }}" type="video/ogg">
+          Your browser does not support the video tag.
+    </video>
+    {{ MEDIA_URL }}
 {% endfor %}
 </body>
 </html>
