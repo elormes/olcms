@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/hover.css' %}">
+
+    <title>UMaT|Offline Learning</title>
+ </head>
+
+  <body>
+          <div class="cover text-sm-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 text-center join">
+                        <img src="{% static 'img/umat.png' %}" alt="UMaT Logo">
+                        <h1>UMaT Offline Learning</h1>
+                        <p>Find and stream tutorials on various courses and other related learning materials offline!</p>
+                    </div>
+                        <div class="col-lg-12 col-sm-12 text-center">
+                             <div class="input-group">
+                                <div class="input-group-btn ">
+                                    <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Find Courses
+                                    </button>
+                                     <div class="dropdown-menu">
+                                       <a class="dropdown-item" href="#">Topic</a>
+                                        <a class="dropdown-item" href="#">Course Code</a>
+                                         <a class="dropdown-item" href="#">Department</a>
+                                     </div>
+                                     </div>
+                                      <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Search Courses">
+                                        <span class="input-group-btn">
+                                                <button class="btn btn-warning" type="button" style="background-color:goldenrod;"><i class="fa fa-search fa-2x" style="color:white;"></i></button>
+                                        </span>
+                                      </div>
+                                      <i class="fa fa-chevron-down fa-4x down"></i>
+                          </div>
+                         
+
+                    </div>
+                </div>
+                   
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="container featured">
+                    <h2 class="text-center">Featured Videos</h2>
+                        <div class="row">
+                                <div class="col-lg-4 col-sm-6 text-center">
+                                  <div class="card">
+                                    <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
+                                    <div class="card-body">
+                                      <h4 class="card-title">Java Tutorials</h4>
+                                      <p id="title" class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, impedit.</p>
+                                      <button class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now<i class="fa fa-eye" id="cart"></i></button>
+                                      </div>
+                                  </div>
+                                </div>
+                               
+                                <div class="col-lg-4 col-sm-6 text-center">
+                                  <div class="card">
+                                    <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
+                                    <div class="card-body">
+                                      <h4 class="card-title">Electrical Engineering</h4>
+                                      <p id="title" class="card-text">Professor Bangal Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, soluta.</p>
+                                      <button  class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now <i class="fa fa-eye" id="cart"></i></button>
+                                      </div>
+                                  </div>
+                                </div>
+                               
+                                     <div class="col-lg-4 col-sm-6 text-center">
+                                  <div class="card">
+                                    <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
+                                    <div class="card-body">
+                                      <h4 class="card-title">Umat Inovation Fair</h4>
+                                      <p id="title" class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, iusto.</p>
+                                      <button  class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now <i class="fa fa-eye" id="cart"></i></button>
+                                      </div>
+                                  </div>
+        
+                                </div>
+                                <div class="col-lg-4 col-sm-6 text-center">
+                                        <div class="card">
+                                          <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
+                                          <div class="card-body">
+                                            <h4 class="card-title">Python Tutorials</h4>
+                                            <p id="title" class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, impedit.</p>
+                                            <button class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now<i class="fa fa-eye" id="cart"></i></button>
+                                            </div>
+                                        </div>
+                                      </div>
+                                     
+                                      <div class="col-lg-4 col-sm-6 text-center">
+                                        <div class="card">
+                                          <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
+                                          <div class="card-body">
+                                            <h4 class="card-title">Mining Engineering</h4>
+                                            <p id="title" class="card-text">Professor Bangal Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, soluta.</p>
+                                            <button  class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now <i class="fa fa-eye" id="cart"></i></button>
+                                            </div>
+                                        </div>
+                                      </div>
+                                     
+                                           <div class="col-lg-4 col-sm-6 text-center">
+                                        <div class="card">
+                                          <img class="card-img-top" src="{% static 'img/cover.jpg' %}" alt="Card image cap" id="dig">
+                                          <div class="card-body">
+                                            <h4 class="card-title">Umex Awards</h4>
+                                            <p id="title" class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, iusto.</p>
+                                            <button  class="btn btn-outline-success btn-lg btn-block" id="order">Watch Now <i class="fa fa-eye" id="cart"></i></button>
+                                            </div>
+                                        </div>
+                                        
+                                      </div>
+                               </div>
+                         </div>
+                       
+                            
+                        </div>
+                    </div>
+                   </div>
+                </div>
+                    
+	 
+  <!--   <footer class="footer">
+    	
+    	<h4> Copyright &copy 2018 - Apple</h4>
+    </footer>
+ -->
+    <script>
+    	window.sr = ScrollReveal();
+        sr.reveal('.navbar', {
+          duration: 2000,
+          origin:'bottom'
+        });
+        sr.reveal('.logo-btn', {
+            duration: 2000,
+            delay:2000,
+            origin:'bottom',
+		    distance:'100px'
+        });
+        sr.reveal('.feed', {
+            duration: 2000,
+            origin:'bottom',
+            distance:'100px'
+        });
+        sr.reveal('.join', {
+            duration: 2000,
+            origin:'left',
+            distance:'300px'
+        });
+
+
+
+
+
+    </script>
+
+
+        <script src="../videos/static/js/scrollreveal.js"></script>
+        <script type="text/javascript" src="../videos/static/js/jquery-3.3.1.min.js"></script>
+	    <script type="text/javascript" src="../videos/static/js/popper.min.js"></script>
+	    <script type="text/javascript" src="../videos/static/js/bootstrap.js"></script>
+
+        <!-- Bootflat's JS files.-->
+
+
+
+</body>
+</html>

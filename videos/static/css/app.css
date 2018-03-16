@@ -1,0 +1,67 @@
+body,html{
+	height: 100%;
+	margin: 0px;
+	font-family: "Montserrat Light",sans-serif;
+}
+.cover{
+	/*position: relative;*/
+	/*opacity:0.85;*/
+	background: url("/static/img/sun.jpg") no-repeat fixed center;
+	background-size: cover;
+	max-height: 60%;
+
+}
+.join{
+	margin-top:110px;
+}
+.join h1{
+	font-family: "Raleway",sans-serif;
+	font-weight: 300;
+	color: white;
+}
+.join p
+{  font-family: "ABeeZee",sans-serif;
+    color: white;
+	padding-left: 200px;
+	padding-right: 200px;
+	font-weight: 200;
+	line-height: 2em;
+}
+.join a{
+	text-transform: uppercase;
+	font-family: "ABeeZee",sans-serif;
+}
+.center{
+	color:white;
+	margin-left: 250px;
+}
+.join img{
+	width:110px;
+	height: 110px;
+	border-radius: 320px;
+	border:2px solid white;
+}
+.search{
+	margin-top: 50%;
+}
+.find{
+	width:200px;
+}
+.featured{
+	margin-top: 20px;
+}
+
+.btn{
+ border:none;
+ border-radius:1px;
+}
+.card:hover{
+	box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card{
+	margin-bottom: 5%;
+}
+.down{
+	margin-top: 22%;
+	color: white;
+}
