@@ -12,6 +12,9 @@ class Playlist(models.Model):
     def __str__(self):
         return self.name
 
+    def filename(self):
+        return os.path.basename(self.name)
+
 
 class Tags(models.Model):
     name = models.CharField(max_length=50)
